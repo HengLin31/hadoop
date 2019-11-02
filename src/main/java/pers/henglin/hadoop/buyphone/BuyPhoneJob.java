@@ -18,7 +18,6 @@ public class BuyPhoneJob {
     private static final String JOB_NAME = "buy-phone";
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
-        args = new String[] {"/Users/linheng/Documents/test/testdata", "/Users/linheng/Documents/test/output3"};
         Configuration conf = new Configuration();
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 
