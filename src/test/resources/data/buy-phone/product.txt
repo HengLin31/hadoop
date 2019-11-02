@@ -1,0 +1,7 @@
+01	iPhone 8 Plus
+02	iPhone 7
+03	iPhone 6S
+04	Google Pixel 3a
+05	Samsung Galaxy A20
+06	Razer Phone 2
+07	iPhone X

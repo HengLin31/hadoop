@@ -17,7 +17,9 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
-    implementation 'com.google.guava:guava:28.0-jre'
+//    implementation 'com.google.guava:guava:28.0-jre'
+    implementation group: 'com.google.guava', name: 'guava', version: '20.0'
+
 
     //hadoop
     implementation group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.7.2'
@@ -33,7 +35,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+compileJava{
+    options.encoding = "UTF-8"
+    options.fork = true
+    options.forkOptions.executable = '/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin/javac'
+}
+
 jar {
     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 }
+
 ext.hadoopVersion = "2.7.2"
