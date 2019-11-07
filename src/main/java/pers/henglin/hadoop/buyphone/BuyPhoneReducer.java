@@ -45,7 +45,7 @@ public class BuyPhoneReducer extends Reducer<Text, CustomerBean, Text, Text> {
                     return;
             }
         }
-        writeResult2(context, customers, productName, productPrice);
+        writeResult(context, customers, productName, productPrice);
     }
 
     private void addCustomer(List<CustomerBean> customers, CustomerBean customer){
@@ -58,7 +58,7 @@ public class BuyPhoneReducer extends Reducer<Text, CustomerBean, Text, Text> {
         customers.add(temp);
     }
 
-    private void writeResult2(Context context, List<CustomerBean> customers, String productName, double productPrice) throws IOException, InterruptedException {
+    private void writeResult(Context context, List<CustomerBean> customers, String productName, double productPrice) throws IOException, InterruptedException {
         if(customers.isEmpty()){
             return;
         }
